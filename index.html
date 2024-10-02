@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+     body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://wallpapers.com/images/high/white-full-screen-footsteps-on-snow-aqybmzyprey4ojq5.webp'); 
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+        }
+
+        .left{
+            padding: 10px;
+            align-content: center;
+           
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .right{margin-left: 5%;
+            text-align: center;
+      
+            align-content: center;
+          
+        }
+        .upper{ 
+            border: 3px solid rgb(27, 142, 119);
+            box-shadow: 0 0 10px rgba(61, 61, 61, 0.5);
+            border-radius: 10px;
+            background-color: #57534eb2;
+            height: 250px;
+          
+            align-content: center;
+            width: 600px;
+        }
+        .lower{ border: 3px solid rgb(248, 222, 174);
+            box-shadow: 0 0 10px rgba(61, 61, 61, 0.5);
+            border-radius: 10px;
+            background-color: rgb(235, 235, 235);
+            height: 250px;
+            width: 600px;
+        }
+    
+        .container {
+            border: 5px solid #a7a29f;
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+          background-color: rgba(5, 112, 101, 0.301);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(48, 22, 22, 0.1);
+            width: 70%;
+            height: 70%;
+           
+        }
+        
+        textarea {
+           
+            width: 90%;
+            height: 150px;
+            padding: 10px;
+            font-size: 24px;
+            margin-left: 15px;
+           background-color: #b5b6bd;
+            border: 1px solid #000000;
+            border-radius: 10px;
+            resize: vertical;
+        }
+
+        .options {
+            margin-bottom: 10px;
+        }
+
+        select, input[type="range"], input[type="color"] {
+            width: 90%; 
+            height: 10%;
+            padding: 10px;
+        
+            border: 1px solid #0051ff; 
+            border-radius: 4px; 
+            font-size: 16px; 
+            margin-top: 10px; /
+        }
+
+
+
+        #output {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .buttons {
+            
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .buttons button {
+            background-color:#820822 ;
+            color: rgb(51, 80, 106);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #777777;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        
+</style>
+<body style="background-color: black;">
+
+    <div class="container">
+  
+        <div  class="left">
+
+            <div class="upper">
+                <textarea id="textInput" placeholder="Type your text here..."></textarea>
+            </div>
+            <div class="lower">
+                <div id="output" style="border: none;" class="output">Your styled text will appear here.</div>
+            </div>
+        </div>
+
+
+
+        <div class="right">
+            <div  class="options">
+                <label for="fontSelect">Select Font:</label>
+                <select id="fontSelect">
+                         <option value="Arial">Arial</option>
+                         <option value="Verdana">Verdana</option>
+                         <option value="Georgia">Georgia</option>
+                         <option value="Algerian">Algerian</option>
+                         <option value="Arial Black">Arial Black</option>
+                         <option value="Times New Roman">Times New Roman</option>
+                        
+                     </select>
+                     <br>
+                     <label style="": 5px;" for="fontSizeRange">Select Font Size:</label>
+                     <input  type="range" id="fontSizeRange" min="10" max="72" value="24">
+                     
+                     <label for="colorPicker">Select Text Color:</label>
+                     <input type="color" id="colorPicker" value="#000000">
+                 </div>
+                 <div class="buttons">
+                    <button id="undoButton">Undo</button>
+                  
+                </div>
+        </div>
+        
+    </div>
+    
+
+    
+
+<script src="index.js"></script>
+</body>
+</html>
